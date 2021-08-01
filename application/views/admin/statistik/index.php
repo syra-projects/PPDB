@@ -31,7 +31,7 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                   <div class="tab-pane active" id="1">
-                    <?php $this->load->view('admin/statistik/pendaftar'); ?>
+                    <?php $this->load->view('admin/statistik/_pendaftar'); ?>
                   </div>
                   <div class="tab-pane" id="2">
                     <?php $this->load->view('admin/statistik/diverifikasi'); ?>

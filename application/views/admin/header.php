@@ -23,21 +23,26 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 	<title><?php echo $judul_web; ?></title>
 	<link rel="icon" type="image/png" href="assets/panel/images/logo_dark.png">
 
-	<!-- Global stylesheets -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-	<link href="assets/panel/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
-	<link href="assets/panel/css/bootstrap.css" rel="stylesheet" type="text/css">
-	<link href="assets/panel/css/core.css" rel="stylesheet" type="text/css">
-	<link href="assets/panel/css/components.css" rel="stylesheet" type="text/css">
-	<link href="assets/panel/css/colors.css" rel="stylesheet" type="text/css">
-	<!-- /global stylesheets -->
+	<link rel="stylesheet" href="assets/template/vendors/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="assets/template/vendors/base/vendor.bundle.base.css">
+	<link rel="stylesheet" href="assets/template/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+	<link rel="stylesheet" href="assets/template/css/style.css">
+
 
 	<!-- Core JS files -->
-	<script type="text/javascript" src="assets/panel/js/plugins/loaders/pace.min.js"></script>
-	<script type="text/javascript" src="assets/panel/js/core/libraries/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/panel/js/core/libraries/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/panel/js/plugins/loaders/blockui.min.js"></script>
-	<!-- /core JS files -->
+	<script src="assets/template/vendors/base/vendor.bundle.base.js"></script>
+	<script src="assets/template/vendors/chart.js/Chart.min.js"></script>
+	<script src="assets/template/vendors/datatables.net/jquery.dataTables.js"></script>
+	<script src="assets/template/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+	<script src="assets/template/js/off-canvas.js"></script>
+	<script src="assets/template/js/hoverable-collapse.js"></script>
+	<script src="assets/template/js/template.js"></script>
+	<script src="assets/template/js/dashboard.js"></script>
+	<script src="assets/template/js/data-table.js"></script>
+	<script src="assets/template/js/jquery.dataTables.js"></script>
+	<script src="assets/template/js/dataTables.bootstrap4.js"></script>
+	<script src="assets/template/js/jquery.cookie.js" type="text/javascript"></script>
+
 	<?php
 	if ($sub_menu == "" or $sub_menu == "profile" or $sub_menu == "ubah_pass" or $menu == "laporan" or $sub_menu == "statistik") {?>
 	<!-- Theme JS files -->
@@ -53,13 +58,29 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 	<!-- <script type="text/javascript" src="assets/panel/js/pages/dashboard.js"></script> -->
 	<!-- /theme JS files -->
 	<?php
-	} ?>
+	}; ?>
+
+  <?php if($sub_menu == "verifikasi" or $sub_menu == "profile" or $sub_menu == "ubah_pass" or $menu == "laporan" or $sub_menu == "statistik"){ ?>
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="assets/panel/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<!-- <link href="assets/panel/css/bootstrap.css" rel="stylesheet" type="text/css"> -->
+	<link href="assets/panel/css/core.css" rel="stylesheet" type="text/css">
+	<link href="assets/panel/css/components.css" rel="stylesheet" type="text/css">
+	<link href="assets/panel/css/colors.css" rel="stylesheet" type="text/css">
+  <!-- Core JS files -->
+	<script type="text/javascript" src="assets/panel/js/plugins/loaders/pace.min.js"></script>
+	<!-- <script type="text/javascript" src="assets/panel/js/core/libraries/jquery.min.js"></script> -->
+	<script type="text/javascript" src="assets/panel/js/core/libraries/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/panel/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+  <?php }; ?>
 
 	<?php
 	if ($sub_menu == "verifikasi" or $sub_menu == "set_pengumuman") {?>
 		<!-- Theme JS files -->
 	<script type="text/javascript" src="assets/panel/js/plugins/tables/datatables/datatables.min.js"></script>
-	<!-- <script type="text/javascript" src="assets/panel/js/plugins/forms/selects/select2.min.js"></script> -->
+	<script type="text/javascript" src="assets/panel/js/plugins/forms/selects/select2.min.js"></script>
 
 	<script type="text/javascript" src="assets/panel/js/core/app.js"></script>
 	<script type="text/javascript" src="assets/panel/js/pages/datatables_basic.js"></script>
@@ -74,106 +95,118 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 		<script type="text/javascript" src="assets/panel/js/sweetalert.min.js"></script>
 </head>
 
-<body class="navbar-bottom">
-
-	<!-- Main navbar -->
-	<div class="navbar navbar-inverse">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="">SMK TARUNA MANDIRI</label></a>
-
-			<ul class="nav navbar-nav visible-xs-block">
-				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
-				<li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
-			</ul>
-		</div>
-
-		<div class="navbar-collapse collapse" id="navbar-mobile">
-			<ul class="nav navbar-nav">
-				<li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
-			</ul>
-
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown dropdown-user">
-					<a class="dropdown-toggle" data-toggle="dropdown">
-						<img src="assets/panel/images/default.png" alt="foto">
-						<span><?php echo ucwords($nama); ?></span>
-						<i class="caret"></i>
-					</a>
-
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li><a href="panel_admin/profile"><i class="icon-user-plus"></i> Profile</a></li>
-						<li><a href="panel_admin/ubah_pass"><i class="icon-key"></i> Ubah Password</a></li>
-						<li class="divider"></li>
-						<li><a href="panel_admin/logout"><i class="icon-switch2"></i> Keluar</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<!-- /main navbar -->
-
-	<!-- Page container -->
-	<div class="page-container">
-
-		<!-- Page content -->
-		<div class="page-content">
-
-			<!-- Main sidebar -->
-			<div class="sidebar sidebar-main sidebar-default">
-				<div class="sidebar-content">
-
-					<!-- Main navigation -->
-					<div class="sidebar-category sidebar-category-visible">
-						<div class="category-title h6">
-							<span>Menu Navigasi</span>
-							<ul class="icons-list">
-								<li><a href="#" data-action="collapse"></a></li>
-							</ul>
-						</div>
-
-						<div class="category-content sidebar-user">
-							<div class="media">
-								<a href="panel_admin/profile" class="media-left"><img src="assets/panel/images/default.png" class="img-circle img-sm" alt="foto"></a>
-								<div class="media-body">
-									<span class="media-heading text-semibold"><?php echo ucwords($nama); ?></span>
-									<div class="text-size-mini text-muted">
-										<i class="icon-pin text-size-small"></i> &nbsp;<?php echo $level; ?>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="category-content no-padding">
-							<ul class="navigation navigation-main navigation-accordion">
-
-								<!-- Main -->
-								<li class="navigation-header"><span>Utama</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li class="<?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'active';} ?>"><a href="panel_admin"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
-								<li class="<?php if($menu == 'panel_admin' AND $sub_menu == 'verifikasi' OR $sub_menu == 'edit_materi'){echo 'active';} ?>"><a href="panel_admin/verifikasi"><i class="icon-file-check"></i> <span>Verifikasi</span></a></li>
-
-								<li class="<?php if($menu == 'panel_admin' AND $sub_menu == 'export'){echo 'active';} ?>"><a href="panel_admin/export"><i class="icon-file-excel"></i> <span>Export Formulir</span></a></li>
-
-								<li class="<?php if($menu == 'panel_admin' AND $sub_menu == 'set_pengumuman'){echo 'active';} ?>"><a href="panel_admin/set_pengumuman"><i class="icon-display4"></i> <span>Setting Pengumuman</span></a></li>
-
-								<li class="<?php if($menu == 'panel_admin' AND $sub_menu == 'statistik'){echo 'active';} ?>"><a href="panel_admin/statistik"><i class="icon-stats-dots"></i> <span>Statistik Pendaftaran</span></a></li>
-								<!-- /Main -->
-								<!-- Data Lainnya -->
-								<li class="navigation-header"><span>Lainnya</span> <i class="icon-menu" title="Data visualization"></i></li>
-								<li>
-									<a href="#"><i class="icon-cog3"></i> <span>Pengaturan</span></a>
-									<ul>
-										<li class="<?php if($sub_menu == 'profile'){echo 'active';} ?>"><a href="panel_admin/profile">Profile</a></li>
-										<li class="<?php if($sub_menu == 'ubah_pass'){echo 'active';} ?>"><a href="panel_admin/ubah_pass">Ubah Password</a></li>
-									</ul>
-								</li>
-								<li><a href="panel_admin/logout"><i class="icon-switch2"></i> <span>Keluar</span></a></li>
-								<!-- /Data Lainnya -->
-
-							</ul>
-						</div>
-					</div>
-					<!-- /main navigation -->
-
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="navbar-brand-wrapper d-flex justify-content-center">
+        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">  
+          <a class="navbar-brand brand-logo" href=""><img style="margin-right: 10px; width: 35px;" src="assets/panel/images/default.png" alt="logo"/><span style="font-size: 12px;">SMK TARUNA MANDIRI</span></a>
+          <a class="navbar-brand brand-logo-mini" href=""><img style="margin-right: 10px; width: 35px;" src="assets/panel/images/default.png" alt="logo"/></a>
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-sort-variant"></span>
+          </button>
+        </div>  
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <ul class="navbar-nav mr-lg-4 w-100">
+          <li class="nav-item nav-search d-none d-lg-block w-100">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="search">
+                  <i class="mdi mdi-magnify"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <span class="nav-profile-name"><?php echo ucwords($nama); ?></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="panel_admin/profile" class="dropdown-item">
+                <i class="mdi mdi-account-circle text-primary"></i>
+                Profile
+              </a>
+              <a href="panel_admin/ubah_pass" class="dropdown-item">
+                <i class="mdi mdi-settings text-primary"></i>
+                Ubah Password
+              </a>
+              <a href="panel_admin/logout" class="dropdown-item">
+                <i class="mdi mdi-logout text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </nav>
+	<div class="container-fluid page-body-wrapper">
+		<nav class="sidebar sidebar-offcanvas" id="sidebar">
+			<ul class="nav">
+			<li class="nav-item <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'active';} ?>">
+				<a class="nav-link" href="Panel_admin">
+				<i class="mdi mdi-home menu-icon"></i>
+				<span class="menu-title">Dashboard</span>
+				</a>
+			</li>
+			<li style="<?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'color: black !important;';} ?>" class="nav-item <?php if($menu == 'panel_admin' AND $sub_menu == 'verifikasi' OR $sub_menu == 'edit_materi'){echo 'active';} ?>">
+				<a class="nav-link text-dark decoration-none" href="Panel_admin/verifikasi">
+          <i <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class=" mdi mdi-account-convert  menu-icon"></i>
+          <span <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="menu-title">Verifikasi</span>
+				</a>
+			</li>
+			<li class="nav-item <?php if($menu == 'panel_admin' AND $sub_menu == 'export'){echo 'active';} ?>">
+				<a class="nav-link" href="Panel_admin/export">
+				<i <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="mdi mdi-arrow-down-bold-circle-outline  menu-icon"></i>
+				<span <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="menu-title">Export Formulir</span>
+				</a>
+			</li>
+			<li class="nav-item <?php if($menu == 'panel_admin' AND $sub_menu == 'set_pengumuman'){echo 'active';} ?>">
+				<a class="nav-link" href="Panel_admin/set_pengumuman">
+				<i <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="mdi mdi-pencil-box-outline menu-icon"></i>
+				<span <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="menu-title">Setting Pengumuman</span>
+				</a>
+			</li>
+			<li class="nav-item <?php if($menu == 'panel_admin' AND $sub_menu == 'statistik'){echo 'active';} ?>">
+				<a class="nav-link" href="Panel_admin/statistik">
+				<i <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class=" mdi mdi-chart-line menu-icon"></i>
+				<span <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="menu-title">Statistik Pendaftaran</span>
+				</a>
+			</li>
+			<li class="nav-item d-flex align-items-center justify-content-center py-2">
+				<!-- <a class="nav-link">
+          <i class=""></i>
+          <span class="text-gray">-- Lainnya --</span>
+        </a> -->
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+				<i <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="mdi mdi-settings menu-icon"></i>
+				<span <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="menu-title">Pengaturan</span>
+				<i <?php if($menu == 'panel_admin' AND $sub_menu == ''){echo 'style="color: black"';} ?> class="menu-arrow"></i>
+				</a>
+				<div class="collapse" id="auth">
+				<ul class="nav flex-column sub-menu">
+					<li  class="nav-item <?php if($sub_menu == 'profile'){echo 'active';} ?>"> <a class="nav-link" href="Panel_admin/profile"> Login </a></li>
+					<li class="nav-item <?php if($sub_menu == 'ubah_pass'){echo 'active';} ?>"> <a class="nav-link" href="Panel_admin/ubah_pass">Ubah Password</a></li>
+				</ul>
 				</div>
-			</div>
-			<!-- /main sidebar -->
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="Panel_admin/logout">
+				<i style="color: red;" class="mdi mdi-power menu-icon"></i>
+				<span style="color: black;" class="menu-title">Keluar</span>
+				</a>
+			</li>
+			</ul>
+		</nav>
+		<!-- partial -->
+		<div class="main-panel">
+        	<div class="content-wrapper">

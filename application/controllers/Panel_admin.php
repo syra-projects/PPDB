@@ -120,9 +120,9 @@ class Panel_admin extends CI_Controller {
 			$data['user']  			  = $this->db->get_where('tbl_user', "username='$ceks'");
 			$data['judul_web'] 		= "Profile";
 
-					$this->load->view('admin/header', $data);
+					$this->load->view('admin/_header', $data);
 					$this->load->view('admin/profile', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/_footer');
 
 					if (isset($_POST['btnupdate'])) {
 						$username	 		= $this->input->post('username');
@@ -163,9 +163,9 @@ class Panel_admin extends CI_Controller {
 			$data['user']  			  = $this->db->get_where('tbl_user', "username='$ceks'");
 			$data['judul_web'] 		= "Ubah Password";
 
-					$this->load->view('admin/header', $data);
+					$this->load->view('admin/_header', $data);
 					$this->load->view('admin/ubah_pass', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/_footer');
 
 					if (isset($_POST['btnupdate2'])) {
 						$password_lama 	= $this->input->post('password_lama');
@@ -246,9 +246,9 @@ class Panel_admin extends CI_Controller {
 			$data['v_siswa']  		= $this->db->get('tbl_siswa');
 			$data['v_thn']				= $thn;
 
-					$this->load->view('admin/header', $data);
+					$this->load->view('admin/_header', $data);
 					$this->load->view('admin/verifikasi/verifikasi', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/_footer');
 		}
 	}
 
@@ -264,9 +264,9 @@ class Panel_admin extends CI_Controller {
 
 			$data['v_materi']  		= $this->db->get_where('tbl_verifikasi', "id_verifikasi='1'")->row();
 
-					$this->load->view('admin/header', $data);
+					$this->load->view('admin/_header', $data);
 					$this->load->view('admin/verifikasi/verifikasi_edit_materi&jadwal', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/_footer');
 
 					if (isset($_POST['btnupdate'])) {
 						$data = array(
@@ -373,9 +373,9 @@ class Panel_admin extends CI_Controller {
 			$data['v_siswa']  		= $this->db->get('tbl_siswa');
 			$data['v_thn']				= $thn;
 
-					$this->load->view('admin/header', $data);
+					$this->load->view('admin/_header', $data);
 					$this->load->view('admin/set_pengumuman/set_pengumuman', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/_footer');
 		}
 	}
 
@@ -390,9 +390,9 @@ class Panel_admin extends CI_Controller {
 
 			$data['v_ket']	  		= $this->db->get_where('tbl_pengumuman', "id_pengumuman='1'")->row();
 
-					$this->load->view('admin/header', $data);
+					$this->load->view('admin/_header', $data);
 					$this->load->view('admin/set_pengumuman/set_keterangan', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/_footer');
 
 					if (isset($_POST['btnupdate'])) {
 						$data = array(
@@ -505,9 +505,9 @@ class Panel_admin extends CI_Controller {
 			 																 $this->db->like('tgl_siswa', "$thn", 'after');
 			 $data['total_tidak_diterima'] = $this->db->get_where("tbl_siswa", "status_pendaftaran='tidak lulus'")->num_rows();
 
-					$this->load->view('admin/header', $data);
+					$this->load->view('admin/_header', $data);
 					$this->load->view('admin/statistik/index', $data);
-					$this->load->view('admin/footer');
+					$this->load->view('admin/_footer');
 		}
 	}
 

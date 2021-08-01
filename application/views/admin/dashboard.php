@@ -6,100 +6,95 @@
 
   $tgl = date('m-Y');
 ?>
-
-<!-- Main content -->
-<div class="content-wrapper">
-  <!-- Content area -->
-  <div class="content">
-
-    <!-- Dashboard content -->
-    <div class="row">
-      <!-- Basic datatable -->
-      <div class="panel panel-flat bg-info">
-        <div class="panel-heading">
-          <h3 class="panel-title">
-            <center>Selamat Datang, <?php echo ucwords($nama); ?></center>
-          </h3>
-        </div>
-      </div>
-      <!-- /basic datatable -->
-
-      <div class="row">
-        <div class="col-lg-12">
-
-          <!-- Quick stats boxes -->
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- Current server load -->
-              <div class="panel bg-teal-400">
-                <div class="panel-body">
-                  <div class="heading-elements">
-                    <span class="heading-text"></span>
-                  </div>
-                  <h3 class="no-margin">
-                    <?php
-                    $thn_ini = date('Y');
-                    $this->db->like('tgl_siswa', $thn_ini, 'after');
-                    echo number_format($this->db->get('tbl_siswa')->num_rows(),0,",","."); ?>
-                  </h3>
-                  Calon Siswa yang mendaftar Tahun <?php echo $thn_ini; ?>
+        <div class="row">
+          <div class="col-md-12 grid-margin">
+            <div class="d-flex justify-content-between flex-wrap">
+              <div class="d-flex align-items-end flex-wrap">
+                <div class="mr-md-3 mr-xl-5">
+                  <h2>Selamat Datang,</h2>
+                  <p class="mb-md-0"> <?php echo ucwords($nama); ?></p>
+                </div>
+                <div class="d-flex">
+                  <i class="mdi mdi-home text-muted hover-cursor"></i>
+                  <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
                 </div>
               </div>
-              <!-- /current server load -->
             </div>
-
-            <div class="col-lg-6">
-              <!-- Current server load -->
-              <div class="panel bg-orange-400">
-                <div class="panel-body">
-                  <div class="heading-elements">
-                    <span class="heading-text"></span>
-                  </div>
-                  <h3 class="no-margin">
-                    <?php
-                    $this->db->like('tgl_siswa', $thn_ini, 'after');
-                    echo number_format($this->db->get_where('tbl_siswa', "status_pendaftaran='lulus'")->num_rows(),0,",",".");  ?>
-                  </h3>
-                  Calon Siswa yang Lulus PPDB Tahun <?php echo $thn_ini; ?>
-                </div>
-              </div>
-              <!-- /current server load -->
-            </div>
-
           </div>
-          <!-- /quick stats boxes -->
-
-
         </div>
-
-      </div>
-
-      <?php if ($web_ppdb->status_ppdb == 'buka') {?>
-        <div class="alert alert-info alert-dismissible" role="alert">
-          <form action="" method="post">
-            <button type="submit" name="btnnonaktif" class="btn btn-primary" onclick="return confirm('Anda Yakin?')"><i class="icon-laptop"></i> Tutup Pendaftaran PPDB Online!</button>
-            <strong>Status Pendaftaran PPDB Online</strong> masih dibuka. Terakhir diubah <?php echo date('d-m-Y H:i:s', strtotime($web_ppdb->tgl_diubah)); ?>.
-           </form>
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body dashboard-tabs p-0">
+                <ul class="nav nav-tabs px-4" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                  </li>
+                </ul>
+                <div class="tab-content py-0 px-0">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                    <div class="d-flex flex-wrap justify-content-xl-between">
+                      <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-start px-5 py-3 item">
+                        <i class="mdi mdi-account-multiple-plus mr-3 icon-lg text-warning"></i>
+                        <div class="d-flex flex-column justify-content-around">
+                          <?php $thn_ini = date('Y'); ?>
+                          <small class="mb-1 text-muted">Calon Siswa Mendaftar Tahun <?php echo $thn_ini; ?></small>
+                          <h5 class="mr-2 mb-0">
+                            <?php
+                              $this->db->like('tgl_siswa', $thn_ini, 'after');
+                              echo number_format($this->db->get('tbl_siswa')->num_rows(),0,",","."); ?>
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="d-flex py-4 border-md-right flex-grow-1 align-items-center justify-content-start px-5 py-3 item">
+                        <i class="mdi mdi-account-check  mr-3 icon-lg text-primary"></i>
+                        <div class="d-flex flex-column justify-content-around">
+                          <small class="mb-1 text-muted">
+                              Calon Siswa yang Lulus PPDB Tahun <?php echo $thn_ini; ?>
+                          </small>
+                          <h5 class="mr-2 mb-0">
+                            <?php
+                              $this->db->like('tgl_siswa', $thn_ini, 'after');
+                              echo number_format($this->db->get_where('tbl_siswa', "status_pendaftaran='lulus'")->num_rows(),0,",",".");  ?>
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      <?php }else{ ?>
-        <div class="alert alert-warning alert-dismissible" role="alert">
-          <form action="" method="post">
-            <button type="submit" name="btnaktif" class="btn btn-warning" onclick="return confirm('Anda Yakin?')"><i class="icon-laptop"></i> Buka Pendaftaran PPDB Online!</button>
-            <strong>Status Pendaftaran PPDB Online</strong> masih ditutup. Terakhir diubah <?php echo date('d-m-Y H:i:s', strtotime($web_ppdb->tgl_diubah)); ?>.
-           </form>
+        <div class="row" id="proBanner">
+          <div class="col-md-12 grid-margin">
+            <div class="card bg-gradient-primary border-0">
+              <div class="card-body py-3 px-4 d-flex align-items-center justify-content-between flex-wrap">
+                <?php if ($web_ppdb->status_ppdb == 'buka') {?>
+                  <div>
+                    <form action="" method="post" class="d-flex align-items-center justify-content-center">
+                      <button type="submit" name="btnnonaktif" class="btn btn-outline-light mr-2 bg-gradient-danger border-0" onclick="return confirm('Anda Yakin?')"><i class="icon-laptop"></i> Tutup Pendaftaran PPDB Online!</button>
+                      <p class="mb-0 text-white font-weight-medium"><strong>Status Pendaftaran PPDB Online</strong> masih <span style="cursor: pointer; color: #fbaaa2;">Dibuka</span>. Terakhir diubah <?php echo date('d-m-Y H:i:s', strtotime($web_ppdb->tgl_diubah)); ?>.</p>
+                    </form>
+                  </div>
+                <?php }else{ ?>
+                  <div>
+                    <form action="" method="post" class="d-flex align-items-center justify-content-center">
+                      <button type="submit" name="btnaktif" class="btn btn-outline-light mr-2 bg-gradient-warning border-0" onclick="return confirm('Anda Yakin?')"><i class="icon-laptop"></i> Buka Pendaftaran PPDB Online!</button>
+                      <p class="mb-0 text-white font-weight-medium"><strong>Status Pendaftaran PPDB Online</strong> masih <span style="cursor: pointer;" class="text-warning">Ditutup</span>. Terakhir diubah <?php echo date('d-m-Y H:i:s', strtotime($web_ppdb->tgl_diubah)); ?>.</p>
+                    </form>
+                  </div>
+                <?php } ?>
+              </div>
+            </div>
+          </div>
         </div>
-      <?php } ?>
-
-    </div>
-    <!-- /dashboard content -->
-
-    <div class="row">
-      <div class="panel panel-flat col-md-12">
-          <div class="panel-body">
-            <fieldset class="content-group">
-              <legend class="text-bold"><i class="icon-stats-dots"></i> Grafik Statistik Pendaftaran Siswa Tahun <?php echo $v_thn; ?> / <?php echo $v_thn+1; ?></legend>
+        <div class="row">
+          <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
               <?php $this->load->view('admin/statistik/pendaftar'); ?>
-            </fieldset>
+              </div>
+            </div>
           </div>
-      </div>
-    </div>
+        </div>
