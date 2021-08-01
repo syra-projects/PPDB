@@ -12,6 +12,8 @@
 		<base href="<?php echo base_url();?>"/>
 
 		<link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+    
     <!-- Bootstrap Core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/faa.css" rel="stylesheet">
@@ -31,14 +33,14 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom bxshad">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:-10px;"> <span style="margin-left:35px;">SMK TARUNA MANDIRI</span> </a>
+                <a class="navbar-brand" href="#page-top"><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:-7px;"> <span style="margin-left:35px;">SMK TARUNA MANDIRI</span> </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,33 +76,43 @@
                 <div class="col-lg-12" >
                     <img class="img-responsive" src="img/logo.png" style="margin-top:-15%;margin-bottom:-10px;" width="100">
                     <div class="intro-text"><br>
-                        <span class="name shad" style="font-size:35px">PPDB ONLINE <br> SMK TARUNA MANDIRI</span>
+
+                    <center>
+                    <div class="name-container">
+                        <span class="name" style="font-size:35px">PPDB ONLINE <br> SMK TARUNA MANDIRI</span>
+                    </div>
+                    </center>
 
                         <br>
                       <?php if ($web_ppdb->status_ppdb == 'buka') {?>
                         <span class="skills">
-                        	<a href="files/Panduan_PPDB_Online_smktarunamandiri.pdf" class="btn btn-danger btn-lg"><i class="fa fa-file-pdf-o faa-pulse animated"></i> &nbsp;Download Panduan PPDB Online</a>
+                        	<a href="files/Panduan_PPDB_Online_smktarunamandiri.pdf" class="btn btn-danger btn-lg shad" style="border-radius: 7.5px;"><i class="fa fa-file-pdf-o faa-pulse animated"></i> &nbsp;Download Panduan PPDB Online</a>
                         </span>
-                        <br> <br>
+
+                        <br><br>
+
                         <hr class="star-light">
 												<br>
                         <!-- <h3>Login Calon Siswa Terdaftar di PPDB Online SMK TARUNA MANDIRI</h3> -->
                         <span>
-                         <a href="pendaftaran" class="btn btn-success btn-lg" style="width:300px;margin:5px;"><i class="fa fa-file faa-pulse animated"></i> &nbsp;Pendaftaran PPDB Online</a>
-												 <a href="logcs" class="btn btn-success btn-lg" style="width:300px;margin:5px;"><i class="fa fa-users faa-pulse animated"></i> &nbsp;<?php if($ceks==''){echo "Login";}else{echo "Panel";} ?> Calon Siswa</a>
-												 <br>
-											  </span>
+                            <a href="pendaftaran" class="btn btn-success btn-lg shad" style="width:300px;margin:5px;border-radius: 7.5px;"><i class="fa fa-file faa-pulse animated"></i> &nbsp;Pendaftaran PPDB Online</a>
+                            <a href="logcs" class="btn btn-success btn-lg shad" style="width:300px;margin:5px;border-radius: 7.5px;"><i class="fa fa-users faa-pulse animated"></i> &nbsp;<?php if($ceks==''){echo "Login";}else{echo "Panel";} ?> Calon Siswa</a>
+                                        
+                            <br>
+                        </span>
+
                       <?php }else{ ?>
-                        <span class="skills">
-                        </span>
-                        <br> <br>
+                        <span class="skills"></span>
+
+                        <br><br>
+
                         <hr class="star-light">
 												<br>
                         <!-- <h3>Login Calon Siswa Terdaftar di PPDB Online SMK TARUNA MANDIRI</h3> -->
                         <span>
-                         <a href="javascript:void(0);" class="btn btn-success btn-lg" style="margin:5px;"><i class="fa fa-file faa-pulse animated"></i> &nbsp;Pendaftaran PPDB Online ditutup</a>
-												 <br>
-											  </span>
+                            <a href="javascript:void(0);" class="btn btn-success btn-lg" style="margin:5px;"><i class="fa fa-file faa-pulse animated"></i> &nbsp;Pendaftaran PPDB Online ditutup</a>
+                            <br>
+                        </span>
                       <?php } ?>
                     </div>
                 </div>
@@ -115,23 +127,21 @@
                 <div class="col-lg-12 text-center">
                     <h2>Tentang sekolah</h2>
                     <hr class="star-primary">
-
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-sm-12 portfolio-item">
-                    <a href="http://www.smktarunamandiri.com" target="_blank" class="portfolio-link">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/logo.png" class="img-thumbnail" alt=""><br><br>
-                        <span class="btn btn-success btn-block">www.smktarunamandiri.com</span>
-                    </a>
+                <div class="col-sm-3">   
+                    <div class="text-center">
+                        <img src="img/logo.png" class="rounded" alt=""><br><br>
+                        <a href="http://www.smktarunamandiri.com" class="btn btn-success">SMK Taruna Mandiri Website</a>
+                    </div> 
                 </div>
-
+                <div class="col-sm-9">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur aliquam nam provident modi! Commodi officia recusandae earum similique omnis labore molestias provident doloribus perferendis officiis inventore maxime accusantium iste, maiores sit, minus animi nam. Suscipit cum, porro quas qui unde possimus libero fugiat id. Asperiores ex quod nihil nemo iste totam, in fugit. Ex facere aliquid molestiae perferendis aut animi delectus, deleniti ipsam eligendi obcaecati modi eaque labore repudiandae nihil soluta, excepturi saepe mollitia? Commodi modi ratione dolorem omnis quas aliquam unde magnam quasi voluptas distinctio, similique sequi aspernatur cupiditate hic reiciendis ad nemo dolor iusto! Recusandae reprehenderit expedita quidem!</p>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -153,22 +163,21 @@
                     <p>Pengisian form PPDB Online mohon diperhatikan data yang dibutuhkan yang nantinya akan dipakai dalam proses PPDB. Setelah proses pengisian form PPDB secara online berhasil dilakukan, calon siswa akan mendapat bukti daftar dengan nomor pendaftaran dan harus disimpan yang akan digunakan untuk proses selanjutnya.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center page-scroll">
-                    <a href="#page-top" class="btn btn-md btn-outline">
-                        <i class="fa fa-pencil-square-o "></i> PPDB Online
+                    <a href="#page-top" class="btn btn-md btn-liner">
+                        <i class="fa fa-pencil-square-o"></i> PPDB Online
                     </a> &nbsp;&nbsp;
-                    <a href="#prosedur" class="btn btn-md btn-outline">
+                    <a href="#prosedur" class="btn btn-md btn-liner">
                         <i class="fa fa-tasks"></i> Prosedur PPDB Online
                     </a>&nbsp;&nbsp;
-                    <a href="logcs" class="btn btn-md btn-outline">
+                    <a href="logcs" class="btn btn-md btn-liner">
                         <i class="fa fa-sign-in"></i> <?php if($ceks==''){echo "Login";}else{echo "Panel";} ?> Calon Siswa
                     </a>&nbsp;&nbsp;
-
                 </div>
             </div>
         </div>
     </section>
 
-     <section id="prosedur">
+    <section id="prosedur">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -189,16 +198,16 @@
                                 <h4>Penjelasan Prosedur PPDB Online</h4>
                                 <hr class="star-primary">
                                 <ol style="font-size:18px;text-align:justify">
-                                <li>Calon Siswa mendaftarkan diri atau melakukan <b><a href="pendaftaran">Pendaftaran PPDB <i>online</i></a></b> melalui website <b><a href="">PPDB SMK TARUNA MANDIRI</a></b>.</li>
-                                <li>Setelah Calon Siswa berhasil melakukan pendaftaran, Calon siswa wajib melakukan <b>Print Out Pendaftaran & Mempersiapkan Kelengkapan Berkas PPDB SMK TARUNA MANDIRI</b>.</li>
-                                <li>Calon siswa datang ke SMK TARUNA MANDIRI untuk <b>VERIFIKASI</b>, membawa <b>Bukti pendaftaran & Kelengkapan Berkas PPDB SMK TARUNA MANDIRI</b>. </li>
-                                <li>Panitia PPDB melakukan <b>Verifikasi dan Validasi Berkas Pendaftaran</b>.</li>
-                                <li>Setelah selesai Calon Siswa Menerima <b>TANDA BUKTI VERIFIKASI</b>.</li>
-                                <li>Calon Siswa wajib mengambil <b>NOMOR TEST & Pengecekan Ruang Ujian</b>.</li>
-                                <li>Jika Calon Siswa sudah mengambil <b>NOMOR TEST & Pengecekan Ruang Ujian</b> selanjutnya Calon Siswa wajib melakukan <b>TEST tertulis POTENSI AKADEMIK</b>.</li>
-																<li>PENGUMUMAN HASIL PPDB Online bisa dilihat di Web PPDB SMK TARUNA MANDIRI. Untuk <b>No. Pendaftaran</b> sesuaikan dengan <b>Formulir No. Pendaftaran</b> & <b>Passwordnya</b> yaitu <b>NISN</b> Calon Siswa tersebut.</li>
-																<li>Jika Calon Siswa dinyatakan <b>LULUS</b> maka Calon Siswa Wajib <b>Registrasi/Daftar Ulang</b> di <b>SMK TARUNA MANDIRI</b>.</li>
-															</ol>
+                                    <li>Calon Siswa mendaftarkan diri atau melakukan <b><a href="pendaftaran">Pendaftaran PPDB <i>online</i></a></b> melalui website <b><a href="">PPDB SMK TARUNA MANDIRI</a></b>.</li>
+                                    <li>Setelah Calon Siswa berhasil melakukan pendaftaran, Calon siswa wajib melakukan <b>Print Out Pendaftaran & Mempersiapkan Kelengkapan Berkas PPDB SMK TARUNA MANDIRI</b>.</li>
+                                    <li>Calon siswa datang ke SMK TARUNA MANDIRI untuk <b>VERIFIKASI</b>, membawa <b>Bukti pendaftaran & Kelengkapan Berkas PPDB SMK TARUNA MANDIRI</b>. </li>
+                                    <li>Panitia PPDB melakukan <b>Verifikasi dan Validasi Berkas Pendaftaran</b>.</li>
+                                    <li>Setelah selesai Calon Siswa Menerima <b>TANDA BUKTI VERIFIKASI</b>.</li>
+                                    <li>Calon Siswa wajib mengambil <b>NOMOR TEST & Pengecekan Ruang Ujian</b>.</li>
+                                    <li>Jika Calon Siswa sudah mengambil <b>NOMOR TEST & Pengecekan Ruang Ujian</b> selanjutnya Calon Siswa wajib melakukan <b>TEST tertulis POTENSI AKADEMIK</b>.</li>
+                                    <li>PENGUMUMAN HASIL PPDB Online bisa dilihat di Web PPDB SMK TARUNA MANDIRI. Untuk <b>No. Pendaftaran</b> sesuaikan dengan <b>Formulir No. Pendaftaran</b> & <b>Passwordnya</b> yaitu <b>NISN</b> Calon Siswa tersebut.</li>
+                                    <li>Jika Calon Siswa dinyatakan <b>LULUS</b> maka Calon Siswa Wajib <b>Registrasi/Daftar Ulang</b> di <b>SMK TARUNA MANDIRI</b>.</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -222,7 +231,7 @@
 										&nbsp;
                     <span class="eml" style="color:#222;"><i class="fa fa-envelope"></i> smktarunamandiri@gmail.com</span>
                     <br>
-                    <a href="http://www.smktarunamandiri.com/" target="_blank"><h4 class="btn btn-success">SMK TARUNA MANDIRI </h4></a>
+                    <a href="http://www.smktarunamandiri.com/" target="_blank"><h4 class="btn btn-success" style="margin-bottom: 25px;">SMK TARUNA MANDIRI </h4></a>
                 </div>
                 <div class="col-lg-8 text-center">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31679.471402780993!2d106.80285596498263!3d-7.017052975652164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa7b40b326f5fff38!2sSMK%20Taruna%20Mandiri!5e0!3m2!1sid!2sid!4v1627694826904!5m2!1sid!2sid" width="100%" height="465" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -236,7 +245,7 @@
     <!-- Footer -->
     <footer class="text-center">
 
-        <div class="footer-below">
+        <div class="footer-below" style="margin-top: 1.5px">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -254,6 +263,8 @@
         </a>
     </div>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
 
     <!-- jQuery -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
