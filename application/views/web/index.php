@@ -131,10 +131,10 @@
             </div>
 
             <div class="row">
-                <div class="col-sm-3">   
+                <div class="col-sm-3">
                     <div class="text-center">
                         <img src="img/logo.png" class="rounded" alt=""><br><br>
-                        <a href="http://www.smktarunamandiri.com" class="btn btn-success">SMK Taruna Mandiri Website</a>
+                        <a href="http://www.smktarunamandiri.com" class="btn btn-success" style="margin-bottom: 10px;">SMK Taruna Mandiri Website</a>
                     </div> 
                 </div>
                 <div class="col-sm-9">
@@ -146,7 +146,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="success" id="about">
+    <section class="success" id="about" style="margin-top: -110px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -177,7 +177,7 @@
         </div>
     </section>
 
-    <section id="prosedur">
+    <section id="prosedur" style="margin-top: -110px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -217,7 +217,7 @@
     </section>
 
     <!-- Contact Section -->
-		<section class="success" id="contact">
+		<section class="success" id="contact"  style="margin-top: -20px;">
         <!-- <div class="container"> -->
             <div class="row" style="margin-top:-100px;margin-bottom:-105px;">
                 <div class="col-lg-4 text-center">
