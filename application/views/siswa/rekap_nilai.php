@@ -282,7 +282,7 @@
       </tr>
       <tr>
         <td valign="top">2.</td>
-        <td align="justify">Apabila ditemukan data nilai yang telah saya berikan tidak benar, maka saya bersedia dikenakan sanksi dan atau di diskualifikasi dari seleksi Penerimaan Peserta Didik Baru (PPDB) SMA Negeri 1 Belitang Tahun Pelajaran <?php echo $thn_ppdb; ?>/<?php echo $thn_ppdb+1; ?>.</td>
+        <td align="justify">Apabila ditemukan data nilai yang telah saya berikan tidak benar, maka saya bersedia dikenakan sanksi dan atau di diskualifikasi dari seleksi Penerimaan Peserta Didik Baru (PPDB) SMK TARUNA MANDIRI Tahun Pelajaran <?php echo $thn_ppdb; ?>/<?php echo $thn_ppdb+1; ?>.</td>
       </tr>
     </table>
 

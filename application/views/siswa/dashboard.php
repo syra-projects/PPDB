@@ -17,7 +17,7 @@
       <div class="panel panel-flat bg-info">
         <div class="panel-heading">
           <h3 class="panel-title">
-            <center>Selamat Datang Calon Siswa SMA Negeri 1 Belitang, <?php echo ucwords($nama); ?></center>
+            <center>Selamat Datang Calon Siswa SMK TARUNA MANDIRI, <?php echo ucwords($nama); ?></center>
           </h3>
         </div>
       </div>
@@ -30,7 +30,7 @@
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <center>
-                    <i class="glyphicon glyphicon-bullhorn"></i> Selamat <b><?php echo $nama; ?></b> <span class="label label-info" style="font-size:20px;">Lulus</span> Seleksi Sebagai Calon Peserta Didik Baru <b>SMA Negeri 1 Belitang</b>, Silahkan Cetak Surat Pengumuman Sebagai Bukti Lulus Seleksi.
+                    <i class="glyphicon glyphicon-bullhorn"></i> Selamat <b><?php echo $nama; ?></b> <span class="label label-info" style="font-size:20px;">Lulus</span> Seleksi Sebagai Calon Peserta Didik Baru <b>SMK TARUNA MANDIRI</b>, Silahkan Cetak Surat Pengumuman Sebagai Bukti Lulus Seleksi.
                     <hr style="margin:0px;margin-bottom:10px;">
                     <a href="panel_siswa/cetak_lulus" class="btn btn-default btn-lg" target="_blank"><i class="icon-printer4"></i> Cetak Bukti Lulus</a>
                   </center>
@@ -44,7 +44,7 @@
                   <center>
                     <i class="glyphicon glyphicon-bullhorn"></i> Mohon Maaf <b><?php echo $nama; ?></b>
                      <span class="label label-danger" style="font-size:20px;">Tidak Lulus</span> 
-                    Sebagai Calon Peserta Didik Baru <b>SMA Negeri 1 Belitang</b>.
+                    Sebagai Calon Peserta Didik Baru <b>SMK TARUNA MANDIRI</b>.
                   </center>
                 </h4>
               </div>

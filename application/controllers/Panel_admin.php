@@ -5,7 +5,7 @@ class Panel_admin extends CI_Controller {
 
 	public function index()
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			$this->load->view('404_content');
 		}else {
@@ -57,7 +57,7 @@ class Panel_admin extends CI_Controller {
 
 	public function log_in()
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(isset($ceks)) {
 			$this->load->view('404_content');
 		}else{
@@ -100,7 +100,7 @@ class Panel_admin extends CI_Controller {
 												redirect('panel_admin/log_in');
 										 } else {
 
-																$this->session->set_userdata('un@sman1_belitang', "$cekun");
+																$this->session->set_userdata('un@smk_tarunamandiri', "$cekun");
 																$this->session->set_userdata('id_user@sman1_belitang', "$row->id_user");
 
 												 			 	redirect('panel_admin');
@@ -113,7 +113,7 @@ class Panel_admin extends CI_Controller {
 
 	public function profile()
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -134,8 +134,8 @@ class Panel_admin extends CI_Controller {
 									);
 									$this->db->update('tbl_user', $data, array('username' => $ceks));
 
-									$this->session->has_userdata('un@sman1_belitang');
-									$this->session->set_userdata('un@sman1_belitang', "$username");
+									$this->session->has_userdata('un@smk_tarunamandiri');
+									$this->session->set_userdata('un@smk_tarunamandiri', "$username");
 
 									$this->session->set_flashdata('msg',
 										'
@@ -156,7 +156,7 @@ class Panel_admin extends CI_Controller {
 
 	public function ubah_pass()
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -217,7 +217,7 @@ class Panel_admin extends CI_Controller {
 
 	public function verifikasi($aksi='', $id='')
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -255,7 +255,7 @@ class Panel_admin extends CI_Controller {
 
 	public function edit_materi($aksi='', $id='')
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -289,7 +289,7 @@ class Panel_admin extends CI_Controller {
 	}
 
 	public function verifikasi_cetak($id='') {
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}
@@ -314,7 +314,7 @@ class Panel_admin extends CI_Controller {
 
 	public function export($aksi='', $id='')
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -338,7 +338,7 @@ class Panel_admin extends CI_Controller {
 
 	public function set_pengumuman($aksi='', $id='')
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -381,7 +381,7 @@ class Panel_admin extends CI_Controller {
 
 	public function edit_ket($aksi='', $id='')
 	{
-		$ceks = $this->session->userdata('un@sman1_belitang');
+		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -415,7 +415,7 @@ class Panel_admin extends CI_Controller {
 	}
 
 	public function statistik($aksi='',$id='') {
-		$ceks 	 = $this->session->userdata('un@sman1_belitang');
+		$ceks 	 = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
 			redirect('panel_admin/log_in');
 		}else{
@@ -513,7 +513,7 @@ class Panel_admin extends CI_Controller {
 
 
 	public function logout() {
-     if ($this->session->has_userdata('un@sman1_belitang') != '' AND $this->session->has_userdata('id_user@sman1_belitang') != '') {
+     if ($this->session->has_userdata('un@smk_tarunamandiri') != '' AND $this->session->has_userdata('id_user@sman1_belitang') != '') {
          $this->session->sess_destroy();
      }
 		 redirect('panel_admin/log_in');

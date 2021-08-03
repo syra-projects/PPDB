@@ -5,7 +5,7 @@
     </td>
     <td align="center">
       <b style="font-size:23px;">PANITIA PENERIAMAAN PESERTA DIDIK BARU (PPDB)</b> <br>
-      <b style="font-size:30px;">SMA NEGERI 1 BELITANG</b> <br>
+      <b style="font-size:30px;">SMK TARUNA MANDIRI</b> <br>
       <b style="font-size:20px;">TAHUN PELAJARAN <?php echo $thn_ppdb; ?> / <?php echo $thn_ppdb+1; ?></b>
     </td>
     <td align="center">
@@ -14,9 +14,9 @@
   </tr>
   <tr>
     <td colspan="3" align="center" style="font-size:15px;">
-      Sekretariat : JL.Marga Pemuka Bangsa Raja No.1001 Gumawang Belitang <img src="img/telp.jpg" alt="telp." style="margin-bottom:-5px;margin-right:-5px;"> 0735-450106 Kab.OKU Timur <img src="img/kode_pos.jpg" alt="Kode Pos." style="margin-bottom:-3px;margin-right:-5px;"> 32382
+      Sekretariat : KP. LEMBUR TENGAH RT 010/ RW 002 DESA PADABEUNGHAR KEC. JAMPANG TENGAH KABUPATEN SUKABUMI <img src="img/telp.jpg" alt="telp." style="margin-bottom:-5px;margin-right:-5px;"> +6281321303277 <img src="img/kode_pos.jpg" alt="Kode Pos." style="margin-bottom:-3px;margin-right:-5px;"> 43171
       <br>
-      Website : https://ppdb.sman1belitang.sch.id   e-mail : smanegeri1belitang@gmail.com
+      Website : https://ppdb.smktarunamandiri.sch.id   e-mail : smktarunamandiri@gmail.com
     </td>
   </tr>
   <tr>

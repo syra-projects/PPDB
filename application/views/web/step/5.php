@@ -5,10 +5,10 @@
   <div class="panel-body">
 
   <div class="form-group">
-      <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Rayon SMA Negeri 1 Belitang <span class="text-danger">*</span></label>
+      <label class="col-sm-3 control-label" style="text-align:right; margin-top:6px">Rayon SMK TARUNA MANDIRI <span class="text-danger">*</span></label>
       <div class="col-sm-9" style="margin-top:3px;">
-        <select class="form-control bg-blue class" data-placeholder="Rayon SMA Negeri 1 Belitang" name="rayonisasi" data-parsley-group="block4" data-parsley-errors-container='div[id="error-rayonisasi"]' required>
-                <option value=""> - Rayon SMA Negeri 1 Belitang - </option>
+        <select class="form-control bg-blue class" data-placeholder="Rayon SMK TARUNA MANDIRI" name="rayonisasi" data-parsley-group="block4" data-parsley-errors-container='div[id="error-rayonisasi"]' required>
+                <option value=""> - Rayon SMK TARUNA MANDIRI - </option>
                 <option value="Lintas Rayon">Lintas Rayon</option>
                 <option value="Lintas Sektoral">Lintas Sektoral</option>
         </select>

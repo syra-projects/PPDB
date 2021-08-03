@@ -36,7 +36,7 @@
     <h4 align="center" style="margin-top:0px;"><u>BUKTI PENDAFTARAN</u></h4>
     <b><center>
       PANITIA PENERIAMAAN PESERTA DIDIK BARU (PPDB) <br>
-      SMA NEGERI 1 BELITANG <br>
+      SMK TARUNA MANDIRI <br>
       TAHUN PELAJARAN <?php echo $thn_ppdb; ?> / <?php echo $thn_ppdb+1; ?></center>
     </b>
     <br>

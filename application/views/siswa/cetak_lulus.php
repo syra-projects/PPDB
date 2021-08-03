@@ -42,7 +42,7 @@
     <br>
     <table width="100%" border="0">
       <tr>
-        <td colspan="3">Kepala SMA Negeri 1 Belitang Kabupaten OKU Timur dengan ini menyatakan bahwa :</td>
+        <td colspan="3">Kepala SMK TARUNA MANDIRI Kabupaten OKU Timur dengan ini menyatakan bahwa :</td>
       </tr>
       <tr>
         <td width="200">NO. PENDAFTARAN</td>

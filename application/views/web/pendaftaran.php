@@ -217,7 +217,7 @@
           <div class="footer">
             <div class="copyright">
               <p class="pull-left sm-pull-reset">
-                <span>Copyright &copy; <a href="http://www.sman1belitang.sch.id" target="_blank">SMK TARUNA MANDIRI</a> <?php echo date('Y'); ?> | IT Development</span>
+                <span>Copyright &copy; <a href="http://www.smktarunamandiri.sch.id" target="_blank">SMK TARUNA MANDIRI</a> <?php echo date('Y'); ?> | IT Development</span>
               </p>
               <p class="pull-right sm-pull-reset">
                 <span><a href="" class="m-r-10"><i class="fa fa-home"></i> Beranda </a> | <a href="#" class="m-l-10 m-r-10" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-legal"></i>Ketentuan & Syarat PPDB</a></span>
