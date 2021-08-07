@@ -9,12 +9,12 @@ class Panel_siswa extends CI_Controller {
 		if(!isset($ceks)) {
 			redirect('');
 		}else{
-			$data['user']   	 = $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'");
+			$data['user']	   = $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'");
 			$data['judul_web'] = "Dashboard";
 
-			$this->load->view('siswa/header', $data);
-			$this->load->view('siswa/dashboard', $data);
-			$this->load->view('siswa/footer');
+			$this->load->view('siswa/header_baru', $data);
+			$this->load->view('siswa/dashboard_baru', $data);
+			$this->load->view('siswa/footer_baru');
 		}
 	}
 
@@ -27,7 +27,7 @@ class Panel_siswa extends CI_Controller {
 			$data['user']   	 = $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'");
 			$data['judul_web'] = "Pengumuman";
 
-			$this->load->view('siswa/header', $data);
+			$this->load->view('siswa/header_baru', $data);
 			$this->load->view('siswa/pengumuman', $data);
 			$this->load->view('siswa/footer');
 		}
@@ -39,10 +39,10 @@ class Panel_siswa extends CI_Controller {
 		if(!isset($ceks)) {
 			redirect('logcs');
 		}else{
-			$data['user']  			  = $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'");
+			$data['user']  			= $this->db->get_where('tbl_siswa', "no_pendaftaran='$ceks'");
  			$data['judul_web'] 		= "Biodata ".ucwords($data['user']->row()->nama_lengkap);
 
-					$this->load->view('siswa/header', $data);
+					$this->load->view('siswa/header_baru', $data);
 					$this->load->view('siswa/biodata', $data);
 					$this->load->view('siswa/footer');
 		}

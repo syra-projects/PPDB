@@ -55,13 +55,13 @@
 
       <div class="main-content">
         <!-- BEGIN TOPBAR -->
-        <div class="topbar" style="background-color:#2B589C;color:#fff;">
+        <div class="topbar" style="background-color:#fff;">
           <div class="header-left">
             <div class="col-sm-12">
               <div style="margin-top:-8px;">
               <h2>
 								<strong class="text-primary">
-									<a href=""><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:-8px;"> <span style="margin-left:35px;color:#fff;">PPDB Online</span></a>
+									<a href=""><img src="img/logo.png" alt="Logo" width="30" style="position:absolute;margin-top:-8px;"> <span style="margin-left:35px;color:#000;">PPDB Online</span></a>
 								</strong>
 							</h>
               </div>
@@ -73,7 +73,7 @@
               <!-- BEGIN USER DROPDOWN -->
               <li class="dropdown" id="language-header">
                 <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                <span style="color:#ddd;">PPDB Tahun Ajaran <b class="text-danger" style="color:#fff;"><?php echo date('Y'); ?>-<?php echo date('Y')+1; ?></b></span>
+                <span style="color:#555;">PPDB Tahun Ajaran <b class="text-danger" style="color:#fff;"><?php echo date('Y'); ?>-<?php echo date('Y')+1; ?></b></span>
                 </a>
               </li>
             </ul>

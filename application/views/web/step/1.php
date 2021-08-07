@@ -1,7 +1,7 @@
-<div class="panel panel-primary">
+<div class="panel">
   <div class="panel-heading">
-    <h2>Kententuan PPDB <strong class="text-success" style="color:#eee;">SMK TARUNA MANDIRI</strong></h2>
-    <span style="font-size:18px;">Unit <b>SMK TARUNA MANDIRI</b> Tahun Ajaran <b><?php echo date('Y'); ?>-<?php echo date('Y')+1; ?></b></span>
+    <h2 style="color: #0040ff;">Kententuan PPDB <strong class="text-success" style="color: #0040ff;">SMK TARUNA MANDIRI</strong></h2>
+    <span style="font-size:18px; color: #0040ff;">Unit <b>SMK TARUNA MANDIRI</b> Tahun Ajaran <b><?php echo date('Y'); ?>-<?php echo date('Y')+1; ?></b></span>
     <!-- <hr> -->
   </div>
   <div class="panel-body">

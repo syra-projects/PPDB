@@ -7,13 +7,13 @@ class Panel_admin extends CI_Controller {
 	{
 		$ceks = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
-			$this->load->view('404_content');
+			redirect('http://localhost/PPDB-halaman-admin/panel_admin/log_in');
 		}else {
 			$data['user']   	 = $this->db->get_where('tbl_user', "username='$ceks'");
 			$data['web_ppdb']	 = $this->db->get_where('tbl_web', "id_web='1'")->row();
-			$data['judul_web'] = "Dashboard";
+			$data['judul_web'] 	 = "Dashboard";
 
-			$thn							 = date('Y');
+			$thn				 = date('Y');
 			$data['v_thn']		 = $thn;
 			foreach($this->Model_data->statistik($thn)->result_array() as $row)
 			 {

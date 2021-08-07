@@ -153,7 +153,6 @@ $sub_menu3 = strtolower($this->uri->segment(3));
 						</div>
 					</div>
 					<!-- /main navigation -->
-
 				</div>
 			</div>
 			<!-- /main sidebar -->
