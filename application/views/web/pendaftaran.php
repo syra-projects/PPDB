@@ -73,7 +73,7 @@
               <!-- BEGIN USER DROPDOWN -->
               <li class="dropdown" id="language-header">
                 <a href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                <span style="color:#555;">PPDB Tahun Ajaran <b class="text-danger" style="color:#fff;"><?php echo date('Y'); ?>-<?php echo date('Y')+1; ?></b></span>
+                <span style="color:#555;">PPDB Tahun Ajaran <b class="text-danger" style="color:#555;"><?php echo date('Y'); ?>-<?php echo date('Y')+1; ?></b></span>
                 </a>
               </li>
             </ul>
