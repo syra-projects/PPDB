@@ -17,7 +17,6 @@
               <li><a data-action="collapse"></a></li>
             </ul>
           </div>
-
                     <br>
                     <a href="panel_admin/edit_materi" class="btn btn-primary">Edit Materi & Jadwal Ujian</a>
                     <div class="col-md-3" style="float:right;margin-right:25px;">

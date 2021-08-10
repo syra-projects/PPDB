@@ -3,7 +3,6 @@
   $id_user = $cek->id_user;
   $nama    = $cek->nama_lengkap;
   $level   = $cek->level;
-
   $tgl = date('m-Y');
 ?>
         <div class="row">
@@ -12,7 +11,7 @@
               <div class="d-flex align-items-end flex-wrap">
                 <div class="mr-md-3 mr-xl-5">
                   <h2>Selamat Datang,</h2>
-                  <p class="mb-md-0"> <?php echo ucwords($nama); ?></p>
+                  <p class="mb-md-0"><?php echo ucwords($nama); ?></p>
                 </div>
                 <div class="d-flex">
                   <i class="mdi mdi-home text-muted hover-cursor"></i>

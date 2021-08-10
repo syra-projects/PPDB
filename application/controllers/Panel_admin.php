@@ -246,9 +246,9 @@ class Panel_admin extends CI_Controller {
 			$data['v_siswa']  		= $this->db->get('tbl_siswa');
 			$data['v_thn']				= $thn;
 
-					$this->load->view('admin/_header', $data);
-					$this->load->view('admin/verifikasi/verifikasi', $data);
-					$this->load->view('admin/_footer');
+					$this->load->view('admin/header', $data);
+					$this->load->view('admin/verifikasi/verifikasi_baru', $data);
+					$this->load->view('admin/footer');
 		}
 	}
 
@@ -371,11 +371,11 @@ class Panel_admin extends CI_Controller {
 			$this->db->like('tgl_siswa', "$thn", 'after');
 			$this->db->order_by('id_siswa', 'DESC');
 			$data['v_siswa']  		= $this->db->get('tbl_siswa');
-			$data['v_thn']				= $thn;
+			$data['v_thn']			= $thn;
 
-					$this->load->view('admin/_header', $data);
-					$this->load->view('admin/set_pengumuman/set_pengumuman', $data);
-					$this->load->view('admin/_footer');
+					$this->load->view('admin/header', $data);
+					$this->load->view('admin/set_pengumuman/set_pengumuman_baru', $data);
+					$this->load->view('admin/footer');
 		}
 	}
 
@@ -413,7 +413,6 @@ class Panel_admin extends CI_Controller {
 					}
 		}
 	}
-
 	public function statistik($aksi='',$id='') {
 		$ceks 	 = $this->session->userdata('un@smk_tarunamandiri');
 		if(!isset($ceks)) {
@@ -505,9 +504,9 @@ class Panel_admin extends CI_Controller {
 			 																 $this->db->like('tgl_siswa', "$thn", 'after');
 			 $data['total_tidak_diterima'] = $this->db->get_where("tbl_siswa", "status_pendaftaran='tidak lulus'")->num_rows();
 
-					$this->load->view('admin/_header', $data);
-					$this->load->view('admin/statistik/index', $data);
-					$this->load->view('admin/_footer');
+					$this->load->view('admin/header', $data);
+					$this->load->view('admin/statistik/index_baru', $data);
+					$this->load->view('admin/footer');
 		}
 	}
 
